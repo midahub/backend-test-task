@@ -18,6 +18,7 @@ app = FastAPI(
     title=settings.APP_TITLE,
 )
 
+# TODO: Add routers here
 ROUTERS = []
 
 for router in ROUTERS:
