@@ -13,12 +13,12 @@ async def lifespan(application: FastAPI):
     yield
 
 
-ROUTERS = []
-
 app = FastAPI(
     lifespan=lifespan,
     title=settings.APP_TITLE,
 )
+
+ROUTERS = []
 
 for router in ROUTERS:
     app.include_router(router)
