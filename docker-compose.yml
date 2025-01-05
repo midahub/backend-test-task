@@ -7,17 +7,13 @@ networks:
 
 services:
   mongodb:
+    container_name: backend_test_task_mongodb
     image: mongo:6-jammy
     networks:
       - app_network
     volumes:
       - db_data:/data/db
 
-  app:
-    build: .
-    networks:
-      - app_network
-    ports:
-      - "8000:8000"
-    depends_on:
-      - mongodb
+  api:
+    container_name: backend_test_task_api
+    # TODO: configure API service
